@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <div class="grid">
+   <input placeholder="Enter your task" class="input">
+   
+   <input type="date" class="dates" required>
+   <button   class="add" onclick="Add()">Add</button>  
+   
+
+   <div class="box"></div>
+    </div>
+    
+</body>
+</html>
+<script>
+
+let todoList=[
+    
+
+ 
+];
+function render(){
+let sum='';
+for(let i=0;i<todoList.length;i++){
+const html1=todoList[i];
+const name=html1.name;
+const date=html1.date;
+const html2=`<div >${name}</div> 
+<div>${date}</div>
+<button  class="color" onclick="todoList.splice(${i},1);
+    render();
+    
+    ">Delete</button>`;
+sum+=html2;
+}
+
+document.querySelector('.box').innerHTML=sum;
+}
+function Add(){
+let matter1=document.querySelector('.input');
+let date=document.querySelector('.dates');
+let name1=matter1.value;
+
+let dam=date.value;
+
+todoList.push({name:name1,date:dam});
+console.log(todoList);
+matter1.value='';
+date.value='';
+
+render();
+}
+
+
+
+
+
+</script>

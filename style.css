@@ -1,0 +1,43 @@
+body{
+
+font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.box,.grid{
+display: grid;
+display: inline-block;
+grid-template-columns: 200px 150px 100px;
+column-gap:10px ;
+row-gap: 10px;
+
+
+}
+.grid{
+
+
+    margin-bottom: 10px;
+}
+.input,.dates{
+font-size: 15px;
+padding: 6px;
+
+
+
+}
+.add{
+color: white;
+    background-color: green;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.color{
+
+border: none;
+color: white;
+    background-color:   red;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
